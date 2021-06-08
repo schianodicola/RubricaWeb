@@ -50,7 +50,12 @@ padding:8px 20px;
 
 	<table>
 	<thead>
-		<tr><td><b>ID</b></td><td><b>Nome</b></td><td><b>Cognome</b></td></tr>
+		<tr>
+			<td><b>ID</b></td>
+			<td><b>Nome</b></td>
+			<td><b>Cognome</b></td>
+			<td><b>Contact Info</b></td>
+		</tr>
 	</thead>
 	<tbody>
 	<c:forEach items="${contatti}" var="u" >
@@ -60,9 +65,10 @@ padding:8px 20px;
 			<td><c:out value="${u.name }"></c:out></td>
 			<td><c:out value="${u.surname }"></c:out></td>
 			<!-- <td><c:out value="${u.emails }"></c:out></td> -->
+			<td> 
+				<a href="/RubricaWeb/CrudServlet?action=info&id=${u.id } "> Info</a> 
+			</td>
 			<td>
-				<!-- <input type="hidden" name="id" value="${u.id }" > 
-				<button type="submit"> Elimina</button>  -->
 				<a href="/RubricaWeb/CrudServlet?action=delete&id=${u.id } "> Elimina</a>
 				<!-- <button type="submit" value="<c:out value="${u.id }" />" > Elimina</button>  -->
 			</td>

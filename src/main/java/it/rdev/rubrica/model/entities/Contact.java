@@ -2,6 +2,7 @@ package it.rdev.rubrica.model.entities;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,9 +25,9 @@ public class Contact {
 	private String name;
 	@Column(name = "surname",  length = 50, nullable = false)
 	private String surname;
-	@OneToMany(mappedBy = "contact")
+	@OneToMany(mappedBy = "contact", cascade= CascadeType.ALL)
 	private Set<Email> emails;
-	@OneToMany(mappedBy = "contact")
+	@OneToMany(mappedBy = "contact", cascade= CascadeType.ALL)
 	private Set<Phone> phones;
 	
 	public Integer getId() {

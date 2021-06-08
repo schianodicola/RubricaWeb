@@ -3,6 +3,7 @@ package it.rdev.rubrica.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,13 +48,20 @@ public class CrudServlet extends HttpServlet {
 		}
 		
 		String reqId = request.getParameter("id");
-		if(action != null && action.equals("delete") ) {
-			//Contact c = ContactDao.getContact(Integer.parseInt(request.getParameter("id")));
-			Contact c = new Contact();
-			c.setId(Integer.parseInt(reqId));
+		//System.out.println(reqId);
+		if(action != null && action.equals("delete") &&  reqId!=null) {
+			
+			Contact c = ContactDao.getContact(Integer.parseInt(reqId));
 			ContactDao.delete(c);
 		}
-		
+		/*
+		if(action != null && action.equals("info") &&  reqId!=null) {
+			
+			Contact c = ContactDao.getContact(Integer.parseInt(reqId));
+			request.setAttribute("contatto", c);
+			request.getRequestDispatcher("crud.jsp").forward(request, response);
+		}
+		*/
 		List<Contact> contatti= ContactDao.findAllCriteria();
 		request.setAttribute("contatti", contatti);
 		
