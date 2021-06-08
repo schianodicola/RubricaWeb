@@ -54,18 +54,22 @@ public class CrudServlet extends HttpServlet {
 			Contact c = ContactDao.getContact(Integer.parseInt(reqId));
 			ContactDao.delete(c);
 		}
-		/*
+		
 		if(action != null && action.equals("info") &&  reqId!=null) {
 			
 			Contact c = ContactDao.getContact(Integer.parseInt(reqId));
+			System.out.println(c.getId() + c.getName());
 			request.setAttribute("contatto", c);
-			request.getRequestDispatcher("crud.jsp").forward(request, response);
-		}
-		*/
+			System.out.println(request.getAttribute("contatto"));
+			request.getRequestDispatcher("contact.jsp").forward(request, response);
+			
+		}else {
+		
 		List<Contact> contatti= ContactDao.findAllCriteria();
 		request.setAttribute("contatti", contatti);
 		
 		request.getRequestDispatcher("crud.jsp").forward(request, response);
+		}
 	}
 
 	/**

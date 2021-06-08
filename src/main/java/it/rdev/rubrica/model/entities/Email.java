@@ -30,5 +30,10 @@ public class Email {
 	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
+	@Override
+	public String toString() {
+		return  email;
+	}
 
+	
 }

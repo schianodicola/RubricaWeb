@@ -5,6 +5,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -25,9 +26,9 @@ public class Contact {
 	private String name;
 	@Column(name = "surname",  length = 50, nullable = false)
 	private String surname;
-	@OneToMany(mappedBy = "contact", cascade= CascadeType.ALL)
+	@OneToMany(mappedBy = "contact", cascade= CascadeType.ALL, fetch= FetchType.LAZY)
 	private Set<Email> emails;
-	@OneToMany(mappedBy = "contact", cascade= CascadeType.ALL)
+	@OneToMany(mappedBy = "contact", cascade= CascadeType.ALL, fetch= FetchType.LAZY)
 	private Set<Phone> phones;
 	
 	public Integer getId() {

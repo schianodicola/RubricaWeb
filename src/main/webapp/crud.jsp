@@ -10,13 +10,11 @@
 
 <style type="text/css">
 table {
-border-collapse:collapse
+	border-collapse:collapse
 }
 td, th {
-border:1px solid #ddd;
-padding:8px 20px;
-}
-
+	border:1px solid #ddd;
+	padding:8px 20px;
 }
 
 </style>
