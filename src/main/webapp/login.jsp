@@ -9,7 +9,7 @@
 <body>
 	<form method="post" action="/RubricaWeb/LoginServlet">
 		<p>
-			Username: <input type="text" name="username">
+			Username: <input type="text" name="username" value="schiano">
 		</p>
 		<p>
 			Password: <input type="password" name="password">

@@ -41,6 +41,9 @@ public class ContactDao {
 		try {
 			trans.begin();
 			em.merge(c);
+			//em.remove(c);
+			//em.persist(c);
+			
 			trans.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

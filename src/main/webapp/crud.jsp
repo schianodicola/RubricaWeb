@@ -67,6 +67,9 @@ td, th {
 				<a href="/RubricaWeb/CrudServlet?action=info&id=${u.id } "> Info</a> 
 			</td>
 			<td>
+				<a href="/RubricaWeb/CrudServlet?action=update&id=${u.id } "> Modifica</a>
+			</td>
+			<td>
 				<a href="/RubricaWeb/CrudServlet?action=delete&id=${u.id } "> Elimina</a>
 				<!-- <button type="submit" value="<c:out value="${u.id }" />" > Elimina</button>  -->
 			</td>

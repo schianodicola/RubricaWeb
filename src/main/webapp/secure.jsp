@@ -7,13 +7,13 @@
 <title>Benvenuto</title>
 </head>
 <body>
-<b>SEI NELLA RISORSA PROTETTA!</b> Vuoi proseguire o disconnetterti?
+<b>SEI TU SCHIANO?!</b> &nbsp; - &nbsp; Premi <i>"LogOut"</i> se non lo sei.
 <br>
 <br>
 <p>
 <a href="/RubricaWeb/CrudServlet">Prosegui</a>
-&nbsp;&nbsp; o &nbsp;&nbsp; 
-<a href="/RubricaWeb/LoginServlet?action=logout"> Disconnetti</a>
+&nbsp;&nbsp; | &nbsp;&nbsp; 
+<a href="/RubricaWeb/LoginServlet?action=logout"> LogOut</a>
 </p>
 </body>
 </html>
